@@ -422,6 +422,11 @@ h2 em {
   right: 24%;
 }
 
+.label-four {
+  bottom: 18%;
+  left: 17%;
+}
+
 .live-card {
   position: absolute;
   z-index: 6;
@@ -873,7 +878,7 @@ h2 {
   animation-delay: -7s;
 }
 
-.network-map circle {
+.network-map .hub {
   fill: var(--lime);
   stroke: rgba(18, 175, 211, 0.4);
   stroke-width: 8;
@@ -906,7 +911,8 @@ h2 {
 
 .network-points {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
   margin-top: 58px;
   padding-top: 25px;
   border-top: 1px solid rgba(255, 255, 255, 0.13);
@@ -1364,7 +1370,8 @@ footer p:last-child {
   }
 
   .network-points {
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px 14px;
   }
 
   .network-points span {
