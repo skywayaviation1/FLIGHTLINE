@@ -1,14 +1,14 @@
 :root {
-  --navy: #07121d;
-  --navy-soft: #0c1b29;
-  --ink: #102031;
-  --muted: #66727d;
-  --mist: #eef2f3;
-  --paper: #f8faf9;
+  --navy: #04172d;
+  --navy-soft: #092849;
+  --ink: #0a3565;
+  --muted: #5b7187;
+  --mist: #e9f5f8;
+  --paper: #f7fbfc;
   --white: #ffffff;
-  --lime: #b9f250;
-  --lime-bright: #ceff70;
-  --line: rgba(16, 32, 49, 0.14);
+  --lime: #12afd3;
+  --lime-bright: #42c8e5;
+  --line: rgba(10, 53, 101, 0.14);
   --display: "Manrope", sans-serif;
   --body: "DM Sans", sans-serif;
 }
@@ -24,7 +24,7 @@ html {
 body {
   margin: 0;
   color: var(--ink);
-  background: #dfe4e4;
+  background: #dcecf1;
   font-family: var(--body);
   -webkit-font-smoothing: antialiased;
 }
@@ -67,19 +67,16 @@ a {
   display: inline-flex;
   align-items: center;
   justify-self: start;
-  gap: 10px;
   width: max-content;
-  font: 800 20px/1 var(--display);
-  letter-spacing: 0.14em;
 }
 
-.brand-mark {
-  width: 30px;
-  fill: var(--lime);
-}
-
-.brand-mark path:last-child {
-  fill: var(--white);
+.brand-logo {
+  display: block;
+  width: clamp(178px, 15vw, 226px);
+  height: auto;
+  padding: 5px 8px;
+  background: var(--white);
+  border-radius: 3px;
 }
 
 .desktop-nav {
@@ -103,7 +100,7 @@ a {
   justify-self: end;
   padding: 12px 17px;
   color: var(--lime);
-  border: 1px solid rgba(185, 242, 80, 0.45);
+  border: 1px solid rgba(18, 175, 211, 0.5);
   border-radius: 3px;
   font-size: 12px;
   font-weight: 700;
@@ -164,7 +161,7 @@ a {
   left: 5%;
   width: 700px;
   height: 500px;
-  background: radial-gradient(circle, rgba(185, 242, 80, 0.1), transparent 68%);
+  background: radial-gradient(circle, rgba(18, 175, 211, 0.12), transparent 68%);
 }
 
 .hero-content {
@@ -243,7 +240,7 @@ h2 em {
 .button-primary {
   color: var(--navy);
   background: var(--lime);
-  box-shadow: 0 10px 35px rgba(185, 242, 80, 0.12);
+  box-shadow: 0 10px 35px rgba(18, 175, 211, 0.18);
   transition:
     background 180ms ease,
     transform 180ms ease;
@@ -297,7 +294,7 @@ h2 em {
   position: absolute;
   inset: 0;
   content: "";
-  border: 1px solid rgba(185, 242, 80, 0.22);
+  border: 1px solid rgba(18, 175, 211, 0.3);
   border-radius: 50%;
 }
 
@@ -328,7 +325,7 @@ h2 em {
   z-index: 3;
   top: 50%;
   left: 50%;
-  border: 1px solid rgba(185, 242, 80, 0.16);
+  border: 1px solid rgba(18, 175, 211, 0.22);
   border-radius: 50%;
   transform: translate(-50%, -50%) rotate(-18deg);
 }
@@ -349,7 +346,7 @@ h2 em {
   z-index: 4;
   width: 33%;
   height: 12%;
-  border-top: 1px dashed rgba(185, 242, 80, 0.6);
+  border-top: 1px dashed rgba(18, 175, 211, 0.72);
   border-radius: 50%;
 }
 
@@ -742,7 +739,7 @@ h2 {
 
 .network-map circle {
   fill: var(--lime);
-  stroke: rgba(185, 242, 80, 0.4);
+  stroke: rgba(18, 175, 211, 0.4);
   stroke-width: 8;
 }
 
@@ -867,7 +864,7 @@ h2 {
   width: 1px;
   height: 100%;
   content: "";
-  background: linear-gradient(transparent, rgba(185, 242, 80, 0.3), transparent);
+  background: linear-gradient(transparent, rgba(18, 175, 211, 0.36), transparent);
   transform: rotate(29deg);
 }
 
@@ -949,12 +946,11 @@ footer {
 }
 
 .footer-brand {
-  color: var(--white);
-  font-size: 16px;
+  width: min(210px, 100%);
 }
 
-.footer-brand .brand-mark {
-  width: 24px;
+.footer-brand .brand-logo {
+  width: 100%;
 }
 
 footer p:last-child {
