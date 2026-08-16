@@ -1,0 +1,49 @@
+From cf39e71fd5f1242673a9d05cc09fee37e8570bc6 Mon Sep 17 00:00:00 2001
+From: Cursor Agent <cursoragent@cursor.com>
+Date: Wed, 5 Aug 2026 19:31:37 +0000
+Subject: [PATCH] Update crew onsite email to aircraft/crew FBO arrival wording
+
+Reword the CREW ONSITE broker status email so it clearly states that the
+aircraft and/or crew has arrived at the FBO, is preparing for passengers,
+and that a follow-up will be sent when the aircraft is ready.
+---
+ src/App.jsx | 15 +++++++--------
+ 1 file changed, 7 insertions(+), 8 deletions(-)
+
+diff --git a/src/App.jsx b/src/App.jsx
+index d8e8e48..99608b7 100644
+--- a/src/App.jsx
++++ b/src/App.jsx
+@@ -1552,22 +1552,21 @@ function buildStatusEmail(step, trip, brokerEmail) {
+     case 'crew_onsite':
+       if (isRepo) {
+         return {
+-          subject: `Crew Preparing Aircraft for Repositioning — ${tail} ${route}`,
++          subject: `Aircraft/Crew Arrival — Repositioning — ${tail} ${route}`,
+           text:
+             `${greeting}\n\n` +
+-            `Our crew has arrived at the FBO at ${localTimeStr} and is preparing the aircraft for the repositioning ` +
+-            `flight from ${trip.info.from || ''} to ${trip.info.to || ''}. ` +
+-            `We will notify you when the aircraft is ready and again when it begins taxi for departure.` +
++            `The aircraft and/or crew has arrived at the FBO at ${localTimeStr} and is preparing the aircraft ` +
++            `for the repositioning flight from ${trip.info.from || ''} to ${trip.info.to || ''}. ` +
++            `We will notify you when the aircraft is ready.` +
+             signature,
+         };
+       }
+       return {
+-        subject: `Crew Arrival Notification — ${tail} ${route}`,
++        subject: `Aircraft/Crew Arrival Notification — ${tail} ${route}`,
+         text:
+           `${greeting}\n\n` +
+-          `This email is to inform you that our crew has arrived at the FBO at ${localTimeStr} ` +
+-          `and is preparing the aircraft for your passengers. We will notify you as soon as ` +
+-          `the aircraft is ready for boarding.` +
++          `The aircraft and/or crew has arrived at the FBO at ${localTimeStr} and is preparing the aircraft ` +
++          `for your passengers. We will notify you when the aircraft is ready.` +
+           signature,
+       };
+ 
+-- 
+2.43.0
+
