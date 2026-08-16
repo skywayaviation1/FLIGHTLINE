@@ -41,11 +41,16 @@ Three steps, in order.
 
 The workflow only runs on `main`. Merging triggers the first deploy.
 
-### 2. Turn on GitHub Pages
+### 2. Check GitHub Pages
 
-In **Settings → Pages**, set **Source** to **GitHub Actions**. Once the first
-deploy finishes, enter `flyskyway.com` under **Custom domain** and tick
-**Enforce HTTPS** after the certificate is issued (this can take a few minutes).
+The workflow enables Pages itself on the first run and picks up the custom
+domain from `CNAME`. Afterwards, confirm in **Settings → Pages** that the
+source is **GitHub Actions** and the custom domain is `flyskyway.com`, then
+tick **Enforce HTTPS** once the certificate is issued (this can take a few
+minutes).
+
+If the first run fails because it could not enable Pages, set **Source** to
+**GitHub Actions** manually and re-run the workflow.
 
 ### 3. Point DNS at GitHub
 

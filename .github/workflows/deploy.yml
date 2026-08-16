@@ -24,7 +24,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Turns Pages on with Actions as the source if it isn't enabled yet.
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
