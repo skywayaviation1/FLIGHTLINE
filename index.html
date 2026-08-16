@@ -321,130 +321,263 @@
             </article>
           </div>
 
-          <div class="fleet-list">
-            <article class="fleet-item reveal">
-              <figure class="fleet-photo">
-                <img
-                  src="assets/fleet/cj3.jpg"
-                  width="1440"
-                  height="810"
-                  loading="lazy"
-                  decoding="async"
-                  alt="Cessna Citation CJ3 light jet in flight"
-                />
-              </figure>
-              <div class="fleet-detail">
-                <p class="fleet-class">Light jet · C25B</p>
-                <h3>Cessna Citation CJ3</h3>
-                <p class="fleet-copy">
-                  Efficient short-field performer. Gets into runways the
-                  midsize aircraft cannot, which makes it the right tool for
-                  regional legs and smaller airports.
-                </p>
-                <dl class="spec-grid">
-                  <div><dt>Passengers</dt><dd>6–7</dd></div>
-                  <div><dt>Crew</dt><dd>1–2 · single-pilot certified</dd></div>
-                  <div><dt>Max cruise</dt><dd>416 ktas · 479 mph</dd></div>
-                  <div><dt>Max range</dt><dd>2,040 nm</dd></div>
-                  <div><dt>Service ceiling</dt><dd>45,000 ft</dd></div>
-                  <div><dt>Takeoff field</dt><dd>3,180 ft</dd></div>
-                  <div><dt>Cabin</dt><dd>15 ft 8 in × 4 ft 10 in × 4 ft 9 in</dd></div>
-                  <div><dt>Baggage</dt><dd>65 cu ft · 1,000 lb</dd></div>
-                  <div class="wide">
-                    <dt>Engines</dt>
-                    <dd>2 × Williams FJ44-3A · 2,820 lbf each</dd>
-                  </div>
-                </dl>
-              </div>
-            </article>
+          <div class="explorer reveal">
+            <div class="explorer-tabs" role="tablist" aria-label="Select an aircraft type">
+              <button
+                class="explorer-tab is-active"
+                role="tab"
+                type="button"
+                id="tab-cj3"
+                aria-selected="true"
+                aria-controls="panel-cj3"
+              >
+                <span class="tab-type">Citation CJ3</span>
+                <span class="tab-class">Light jet</span>
+              </button>
+              <button
+                class="explorer-tab"
+                role="tab"
+                type="button"
+                id="tab-xls"
+                aria-selected="false"
+                aria-controls="panel-xls"
+                tabindex="-1"
+              >
+                <span class="tab-type">Citation XLS</span>
+                <span class="tab-class">Midsize jet</span>
+              </button>
+              <button
+                class="explorer-tab"
+                role="tab"
+                type="button"
+                id="tab-lear60"
+                aria-selected="false"
+                aria-controls="panel-lear60"
+                tabindex="-1"
+              >
+                <span class="tab-type">Learjet 60</span>
+                <span class="tab-class">Midsize jet</span>
+              </button>
+              <span class="tab-marker" aria-hidden="true"></span>
+            </div>
 
-            <article class="fleet-item reveal">
-              <figure class="fleet-photo">
-                <img
-                  src="assets/fleet/xls.jpg"
-                  width="1440"
-                  height="810"
-                  loading="lazy"
-                  decoding="async"
-                  alt="Cessna Citation XLS midsize jet on the ramp"
-                />
-              </figure>
-              <div class="fleet-detail">
-                <p class="fleet-class">Midsize jet · C56X</p>
-                <h3>Cessna Citation XLS</h3>
-                <p class="fleet-copy">
-                  The workhorse midsize. A stand-up, flat-floor cabin with a
-                  galley and enclosed lavatory, paired with runway performance
-                  closer to a light jet than a midsize.
-                </p>
-                <dl class="spec-grid">
-                  <div><dt>Passengers</dt><dd>8–9</dd></div>
-                  <div><dt>Crew</dt><dd>2</dd></div>
-                  <div><dt>Max cruise</dt><dd>441 ktas · 507 mph</dd></div>
-                  <div><dt>Max range</dt><dd>1,858 nm</dd></div>
-                  <div><dt>Service ceiling</dt><dd>45,000 ft</dd></div>
-                  <div><dt>Cabin</dt><dd>Stand-up · flat floor</dd></div>
-                  <div class="wide">
-                    <dt>Cabin size</dt>
-                    <dd>18 ft 6 in × 5 ft 6 in × 5 ft 7 in</dd>
-                  </div>
-                  <div><dt>Baggage</dt><dd>80 cu ft external</dd></div>
-                  <div><dt>Engines</dt><dd>2 × PW545B · 3,975 lbf</dd></div>
-                </dl>
-              </div>
-            </article>
+            <div class="explorer-stage">
+              <div class="stage-visual">
+                <div class="stage-grid" aria-hidden="true"></div>
+                <div class="stage-scan" aria-hidden="true"></div>
+                <span class="bracket tl" aria-hidden="true"></span>
+                <span class="bracket tr" aria-hidden="true"></span>
+                <span class="bracket bl" aria-hidden="true"></span>
+                <span class="bracket br" aria-hidden="true"></span>
 
-            <article class="fleet-item reveal">
-              <figure class="fleet-photo">
-                <img
-                  src="assets/fleet/lear60.jpg"
-                  width="1440"
-                  height="810"
-                  loading="lazy"
-                  decoding="async"
-                  alt="Bombardier Learjet 60 midsize jet in flight"
-                />
-              </figure>
-              <div class="fleet-detail">
-                <p class="fleet-class">Midsize jet · LJ60</p>
-                <h3>Bombardier Learjet 60</h3>
-                <p class="fleet-copy">
-                  Speed and altitude. It climbs above the weather and the
-                  traffic and covers long domestic legs faster than anything
-                  else in this class.
-                </p>
-                <dl class="spec-grid">
-                  <div><dt>Passengers</dt><dd>7–8</dd></div>
-                  <div><dt>Crew</dt><dd>2</dd></div>
-                  <div><dt>Max cruise</dt><dd>457 ktas · Mach 0.81</dd></div>
-                  <div><dt>Max range</dt><dd>2,405 nm</dd></div>
-                  <div><dt>Service ceiling</dt><dd>51,000 ft</dd></div>
-                  <div><dt>Baggage</dt><dd>55 cu ft</dd></div>
-                  <div><dt>Cabin</dt><dd>17 ft 8 in × 5 ft 11 in × 5 ft 9 in</dd></div>
-                  <div><dt>Engines</dt><dd>2 × PW305A · 4,600 lbf</dd></div>
-                </dl>
+                <picture class="stage-art is-active" data-art="cj3">
+                  <source srcset="assets/fleet/cj3.webp" type="image/webp" />
+                  <img
+                    src="assets/fleet/cj3.jpg"
+                    width="1400"
+                    height="933"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Wireframe rendering of the Cessna Citation CJ3, a light jet with straight wings and rear-mounted engines"
+                  />
+                </picture>
+                <picture class="stage-art" data-art="xls">
+                  <source srcset="assets/fleet/xls.webp" type="image/webp" />
+                  <img
+                    src="assets/fleet/xls.jpg"
+                    width="1400"
+                    height="933"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Wireframe rendering of the Cessna Citation XLS, a midsize jet with a tall stand-up cabin"
+                  />
+                </picture>
+                <picture class="stage-art" data-art="lear60">
+                  <source srcset="assets/fleet/lear60.webp" type="image/webp" />
+                  <img
+                    src="assets/fleet/lear60.jpg"
+                    width="1400"
+                    height="933"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Wireframe rendering of the Bombardier Learjet 60, a midsize jet with swept wings and winglets"
+                  />
+                </picture>
+
+                <div class="stage-dims">
+                  <div data-dim="cj3" class="is-active">
+                    <span><small>Length</small><strong>51 ft 2 in</strong></span>
+                    <span><small>Wingspan</small><strong>53 ft 4 in</strong></span>
+                  </div>
+                  <div data-dim="xls">
+                    <span><small>Length</small><strong>52 ft 9 in</strong></span>
+                    <span><small>Wingspan</small><strong>56 ft 4 in</strong></span>
+                  </div>
+                  <div data-dim="lear60">
+                    <span><small>Length</small><strong>58 ft 8 in</strong></span>
+                    <span><small>Wingspan</small><strong>43 ft 9 in</strong></span>
+                  </div>
+                </div>
               </div>
-            </article>
+
+              <div class="stage-data">
+                <div
+                  class="stage-panel is-active"
+                  id="panel-cj3"
+                  role="tabpanel"
+                  aria-labelledby="tab-cj3"
+                >
+                  <p class="stage-class">Light jet · C25B</p>
+                  <h3>Cessna Citation CJ3</h3>
+                  <p class="stage-copy">
+                    Our short-field specialist. It gets into runways the midsize
+                    aircraft cannot, which makes it the efficient answer for
+                    regional legs and smaller airports.
+                  </p>
+                  <div class="stat-row">
+                    <div><strong data-count="7" data-prefix="6–">6–7</strong><span>Passengers</span></div>
+                    <div><strong data-count="2040" data-suffix=" nm">2,040 nm</strong><span>Max range</span></div>
+                    <div><strong data-count="416" data-suffix=" kt">416 kt</strong><span>Max cruise</span></div>
+                    <div><strong data-count="45000" data-suffix=" ft">45,000 ft</strong><span>Ceiling</span></div>
+                  </div>
+                  <dl class="spec-mini">
+                    <div><dt>Crew</dt><dd>1–2 · single-pilot certified</dd></div>
+                    <div><dt>Cabin</dt><dd>15 ft 8 in × 4 ft 10 in × 4 ft 9 in</dd></div>
+                    <div><dt>Cabin volume</dt><dd>286 cu ft</dd></div>
+                    <div><dt>Baggage</dt><dd>65 cu ft · 1,000 lb</dd></div>
+                    <div><dt>Takeoff field</dt><dd>3,180 ft</dd></div>
+                    <div><dt>Engines</dt><dd>2 × Williams FJ44-3A · 2,820 lbf</dd></div>
+                  </dl>
+                </div>
+
+                <div
+                  class="stage-panel"
+                  id="panel-xls"
+                  role="tabpanel"
+                  aria-labelledby="tab-xls"
+                  hidden
+                >
+                  <p class="stage-class">Midsize jet · C56X</p>
+                  <h3>Cessna Citation XLS</h3>
+                  <p class="stage-copy">
+                    The workhorse. A stand-up, flat-floor cabin with a galley
+                    and enclosed lavatory, paired with runway performance
+                    closer to a light jet than a midsize.
+                  </p>
+                  <div class="stat-row">
+                    <div><strong data-count="9" data-prefix="8–">8–9</strong><span>Passengers</span></div>
+                    <div><strong data-count="1858" data-suffix=" nm">1,858 nm</strong><span>Max range</span></div>
+                    <div><strong data-count="441" data-suffix=" kt">441 kt</strong><span>Max cruise</span></div>
+                    <div><strong data-count="45000" data-suffix=" ft">45,000 ft</strong><span>Ceiling</span></div>
+                  </div>
+                  <dl class="spec-mini">
+                    <div><dt>Crew</dt><dd>2</dd></div>
+                    <div><dt>Cabin</dt><dd>18 ft 6 in × 5 ft 6 in × 5 ft 7 in</dd></div>
+                    <div><dt>Cabin volume</dt><dd>422 cu ft</dd></div>
+                    <div><dt>Baggage</dt><dd>80 cu ft external</dd></div>
+                    <div><dt>Cabin type</dt><dd>Stand-up · flat floor</dd></div>
+                    <div><dt>Engines</dt><dd>2 × PW545B · 3,975 lbf</dd></div>
+                  </dl>
+                </div>
+
+                <div
+                  class="stage-panel"
+                  id="panel-lear60"
+                  role="tabpanel"
+                  aria-labelledby="tab-lear60"
+                  hidden
+                >
+                  <p class="stage-class">Midsize jet · LJ60</p>
+                  <h3>Bombardier Learjet 60</h3>
+                  <p class="stage-copy">
+                    Speed and altitude. It climbs above the weather and the
+                    traffic and covers long domestic legs faster than anything
+                    else in this class.
+                  </p>
+                  <div class="stat-row">
+                    <div><strong data-count="8" data-prefix="7–">7–8</strong><span>Passengers</span></div>
+                    <div><strong data-count="2405" data-suffix=" nm">2,405 nm</strong><span>Max range</span></div>
+                    <div><strong data-count="457" data-suffix=" kt">457 kt</strong><span>Max cruise</span></div>
+                    <div><strong data-count="51000" data-suffix=" ft">51,000 ft</strong><span>Ceiling</span></div>
+                  </div>
+                  <dl class="spec-mini">
+                    <div><dt>Crew</dt><dd>2</dd></div>
+                    <div><dt>Cabin</dt><dd>17 ft 8 in × 5 ft 11 in × 5 ft 9 in</dd></div>
+                    <div><dt>Cabin volume</dt><dd>453 cu ft</dd></div>
+                    <div><dt>Baggage</dt><dd>55 cu ft</dd></div>
+                    <div><dt>Top speed</dt><dd>Mach 0.81</dd></div>
+                    <div><dt>Engines</dt><dd>2 × PW305A · 4,600 lbf</dd></div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <div class="compare">
+              <div class="compare-metric">
+                <p class="compare-title">Max range <span>nm</span></p>
+                <div class="bar" data-for="cj3" style="--pct: 84.8%">
+                  <span class="bar-name">CJ3</span>
+                  <span class="bar-track"><i></i></span>
+                  <span class="bar-value">2,040</span>
+                </div>
+                <div class="bar" data-for="xls" style="--pct: 77.3%">
+                  <span class="bar-name">XLS</span>
+                  <span class="bar-track"><i></i></span>
+                  <span class="bar-value">1,858</span>
+                </div>
+                <div class="bar" data-for="lear60" style="--pct: 100%">
+                  <span class="bar-name">LR60</span>
+                  <span class="bar-track"><i></i></span>
+                  <span class="bar-value">2,405</span>
+                </div>
+              </div>
+
+              <div class="compare-metric">
+                <p class="compare-title">Max cruise <span>kt</span></p>
+                <div class="bar" data-for="cj3" style="--pct: 91%">
+                  <span class="bar-name">CJ3</span>
+                  <span class="bar-track"><i></i></span>
+                  <span class="bar-value">416</span>
+                </div>
+                <div class="bar" data-for="xls" style="--pct: 96.5%">
+                  <span class="bar-name">XLS</span>
+                  <span class="bar-track"><i></i></span>
+                  <span class="bar-value">441</span>
+                </div>
+                <div class="bar" data-for="lear60" style="--pct: 100%">
+                  <span class="bar-name">LR60</span>
+                  <span class="bar-track"><i></i></span>
+                  <span class="bar-value">457</span>
+                </div>
+              </div>
+
+              <div class="compare-metric">
+                <p class="compare-title">Cabin volume <span>cu ft</span></p>
+                <div class="bar" data-for="cj3" style="--pct: 63.1%">
+                  <span class="bar-name">CJ3</span>
+                  <span class="bar-track"><i></i></span>
+                  <span class="bar-value">286</span>
+                </div>
+                <div class="bar" data-for="xls" style="--pct: 93.2%">
+                  <span class="bar-name">XLS</span>
+                  <span class="bar-track"><i></i></span>
+                  <span class="bar-value">422</span>
+                </div>
+                <div class="bar" data-for="lear60" style="--pct: 100%">
+                  <span class="bar-name">LR60</span>
+                  <span class="bar-track"><i></i></span>
+                  <span class="bar-value">453</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <p class="fleet-note reveal">
-            Performance figures are manufacturer maximums under standard
-            conditions. Actual range, payload, and seating vary by aircraft
-            configuration, passenger and baggage load, weather, and runway.
-            Confirm the specific tail with your broker.
-          </p>
-          <p class="fleet-note fleet-credit reveal">
-            Aircraft shown are representative of type. Photography via Wikimedia
-            Commons:
-            <a href="https://commons.wikimedia.org/wiki/File:Cessna_525B_Citation_CJ3_N111KJ.jpg">Citation CJ3</a>
-            by Sixflashphoto,
-            <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:Cessna_560XL_Citation_XLS_CS-DXK.jpg">Citation XLS</a>
-            by Julian Herzog,
-            <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>;
-            <a href="https://commons.wikimedia.org/wiki/File:Learjet_60_N491CP_BWI_MD1.jpg">Learjet 60</a>
-            by Acroterion,
-            <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>.
+            Renderings are illustrative digital models of each type, not
+            photographs of specific aircraft. Performance figures are
+            manufacturer maximums under standard conditions; actual range,
+            payload, and seating vary by configuration, load, weather, and
+            runway. Confirm the specific tail with your broker.
           </p>
         </section>
 
