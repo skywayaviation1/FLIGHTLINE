@@ -95,11 +95,29 @@ instructions instead of step 3.
 
 ## Editing content
 
-Text lives directly in `index.html`. The two things most likely to change:
+Text lives directly in `index.html`. The things most likely to change:
 
 - **Service area** — the coverage list in the `#network` section.
 - **AOG coverage** — the terms in the `#aog` section, currently *up to 50% of
   the trip total toward a recovery option*.
+- **Fleet** — the aircraft and specs in the `#fleet` section.
+
+### Fleet photos
+
+`assets/fleet/` currently holds Creative Commons photos of each type from
+Wikimedia Commons, credited beneath the fleet list. They are stock images of
+the aircraft *type*, not Skyway aircraft.
+
+Replacing them with photos of your own tails would be a clear improvement. To
+swap one in, crop it to 16:9, save it over the matching file in
+`assets/fleet/`, and delete that aircraft's entry from the photo credit line at
+the bottom of the fleet section. Once all three are your own, remove the credit
+paragraph entirely.
+
+The published performance figures come from Textron, Bombardier, and industry
+spec sheets, and are manufacturer maximums. Seating counts are shown as ranges
+because configuration varies by tail — worth checking against your actual
+aircraft.
 
 The coverage map is a pre-generated Albers projection of the service area,
 stored as an SVG symbol near the top of `index.html` and reused in both the
