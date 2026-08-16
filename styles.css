@@ -117,8 +117,14 @@ a {
 
 .hero {
   position: relative;
-  min-height: 890px;
-  padding: 190px clamp(24px, 7vw, 110px) 64px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.94fr);
+  grid-template-rows: 1fr auto;
+  column-gap: clamp(24px, 4vw, 64px);
+  row-gap: 44px;
+  align-items: center;
+  min-height: 830px;
+  padding: 150px clamp(24px, 7vw, 110px) 60px;
   overflow: hidden;
   color: var(--white);
   background:
@@ -164,7 +170,9 @@ a {
 .hero-content {
   position: relative;
   z-index: 4;
-  width: min(660px, 53%);
+  grid-column: 1;
+  grid-row: 1;
+  align-self: end;
 }
 
 .eyebrow {
@@ -198,8 +206,8 @@ h2 {
 }
 
 h1 {
-  font-size: clamp(58px, 6.3vw, 100px);
-  line-height: 0.98;
+  font-size: clamp(50px, 5.4vw, 92px);
+  line-height: 1;
 }
 
 h1 em,
@@ -266,21 +274,17 @@ h2 em {
 }
 
 .hero-visual {
-  position: absolute;
+  position: relative;
   z-index: 2;
-  top: 125px;
-  right: -30px;
-  width: min(48vw, 700px);
-  aspect-ratio: 1;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  width: 100%;
+  aspect-ratio: 1000 / 940.7;
 }
 
 .coverage {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  aspect-ratio: 1000 / 940.7;
-  transform: translate(-50%, -50%);
+  inset: 0;
 }
 
 .coverage-glow {
@@ -313,24 +317,20 @@ h2 em {
 .coverage-map .route {
   fill: none;
   stroke: var(--lime);
-  stroke-dasharray: 8 12;
-  stroke-width: 2.4;
-  opacity: 0.85;
+  stroke-dasharray: 7 13;
+  stroke-width: 1.7;
+  opacity: 0.34;
   animation: dash 26s linear infinite;
 }
 
-.coverage-map .delay {
-  animation-delay: -8s;
+.coverage-map .route.bright {
+  stroke-width: 2.1;
+  opacity: 0.62;
 }
 
-.coverage-map .slow {
-  animation-delay: -16s;
-}
-
-.coverage-map .hub {
+.coverage-map .node {
   fill: var(--lime);
-  stroke: rgba(18, 175, 211, 0.35);
-  stroke-width: 9;
+  opacity: 0.62;
 }
 
 .map-sprite {
@@ -458,14 +458,13 @@ h2 em {
 }
 
 .hero-stats {
-  position: absolute;
+  position: relative;
   z-index: 4;
-  right: clamp(24px, 7vw, 110px);
-  bottom: 50px;
-  left: clamp(24px, 7vw, 110px);
+  grid-column: 1;
+  grid-row: 2;
   display: flex;
-  gap: 0;
-  width: min(670px, 53%);
+  gap: 16px;
+  align-self: start;
   padding-top: 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.13);
 }
@@ -1503,22 +1502,9 @@ footer p:last-child {
 
 @media (max-width: 1050px) {
   .hero {
-    min-height: 930px;
-  }
-
-  .hero-content {
-    width: 64%;
-  }
-
-  .hero-visual {
-    top: 205px;
-    right: -160px;
-    width: 650px;
-    opacity: 0.72;
-  }
-
-  .hero-stats {
-    width: 65%;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.72fr);
+    min-height: 780px;
+    padding-top: 132px;
   }
 
   .intro-content,
@@ -1638,12 +1624,16 @@ footer p:last-child {
   }
 
   .hero {
-    min-height: 860px;
-    padding: 144px 22px 50px;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto auto;
+    row-gap: 32px;
+    min-height: 0;
+    padding: 124px 22px 56px;
   }
 
   .hero-content {
-    width: 100%;
+    grid-column: 1;
+    grid-row: 1;
   }
 
   h1 {
@@ -1666,11 +1656,11 @@ footer p:last-child {
   }
 
   .hero-visual {
-    top: auto;
-    right: -115px;
-    bottom: 13px;
-    width: 440px;
-    opacity: 0.45;
+    grid-column: 1;
+    grid-row: 3;
+    width: calc(100% + 26px);
+    margin: 0 -13px;
+    opacity: 0.9;
   }
 
   .coverage-label,
@@ -1679,23 +1669,14 @@ footer p:last-child {
   }
 
   .hero-stats {
-    right: 22px;
-    bottom: 35px;
-    left: 22px;
-    width: auto;
-  }
-
-  .hero-stats div:nth-child(2) {
-    text-align: center;
-  }
-
-  .hero-stats div:last-child {
-    align-items: flex-end;
+    grid-column: 1;
+    grid-row: 2;
+    gap: 12px;
   }
 
   .hero-stats span {
-    max-width: 90px;
     font-size: 8px;
+    line-height: 1.4;
   }
 
   .section {
